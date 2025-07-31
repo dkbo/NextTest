@@ -12,3 +12,5 @@ export default async function TicketPage({
 
   return <Form movieList={movieList} searchParams={searchParamsObj} />
 }
+
+export const dynamic = 'force-dynamic'

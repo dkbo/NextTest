@@ -5,14 +5,7 @@ import { useVirtualizer } from '@tanstack/react-virtual'
 import { useTickerStore } from '@/stores/useTicket'
 import { TicketType } from '@/types/ticket'
 
-type MovieProps2 = {
-  id: number | string
-  name: string
-  image: string
-}
-
 type MovieProps = {
-  movieList: MovieProps2[]
   movieReservations: TicketType[]
 }
 

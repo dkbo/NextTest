@@ -1,11 +1,12 @@
 // app/book/page.tsx
-import { getMovies, getMovieReservations } from '@/api/movies'
+import { getMovieReservations } from '@/api/movies'
 import Table from './Table'
 export default async function TicketPage() {
-  const [resData2, resData] = await Promise.all([getMovieReservations(), getMovies()])
-  const movieList = resData?.data
-  const movieReservations = resData2?.data
+  const resData = await getMovieReservations()
+  const movieReservations = resData?.data
 
   getMovieReservations
-  return <Table movieList={movieList} movieReservations={movieReservations} />
+  return <Table movieReservations={movieReservations} />
 }
+
+export const dynamic = 'force-dynamic'
