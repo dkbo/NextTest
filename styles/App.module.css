@@ -1,0 +1,24 @@
+@reference "tailwindcss";
+
+.movies {
+  @apply grid gap-4 cursor-pointer max-w-[1280px] m-auto px-4;
+  @apply max-md:grid-cols-2;
+  @apply md:grid-cols-3 md:gap-8;
+  @apply xl:grid-cols-4;
+
+  & > [data-movie] {
+    @apply flex flex-col w-full;
+  }
+
+  & figure {
+    @apply w-full overflow-hidden rounded-lg relative aspect-[3/4];
+  }
+
+  & figure img {
+    @apply w-full h-full object-cover;
+  }
+
+  & [data-title] {
+    @apply text-white flex items-center justify-center h-auto;
+  }
+}
