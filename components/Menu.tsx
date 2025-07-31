@@ -14,7 +14,9 @@ export default function Menu() {
           </li>
           {/* <li>訂票查詢</li> */}
         </ul>
-        <div>{/* <Link href="/ticket">線上訂票</Link> */}</div>
+        <div>
+          <Link href="/copilot">智慧訂票</Link>
+        </div>
       </div>
     </div>
   )

@@ -63,6 +63,7 @@ export default function Form({ movieList, searchParams }: MoviesProps) {
                 <select
                   id="people"
                   disabled={alreadyed}
+                  value={params.number_of_guests}
                   className="w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm"
                   onChange={handleChange}
                 >
