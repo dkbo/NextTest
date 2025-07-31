@@ -23,9 +23,7 @@ export default function DateSelector() {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <button
-          className={cn(
-            'border px-4 py-2 rounded-md text-white bg-blue-700 hover:bg-blue-800 transition-all'
-          )}
+          className={cn('border px-4 py-2 rounded-md text-white transition-all cursor-pointer')}
         >
           {date ? format(date, 'yyyy/MM/dd') : ''}
         </button>

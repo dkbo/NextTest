@@ -63,13 +63,15 @@ export default function Movie(props: MovieProps) {
   }
   return (
     <div className={styles.movies}>
-      <DateSelector />
+      <div data-card-top>
+        <div data-title> {data?.name}</div>
+        <DateSelector />
+      </div>
       <div data-card>
         <figure>
           <Image src={data?.image || ''} fill alt={data?.name || '電影海報'} priority />
         </figure>
-        <div data-right-card>
-          <div data-title> {data?.name}</div>
+        <div data-card-body>
           <div data-boxs>
             {timeDomArr.map((time) => (
               <div
