@@ -5,15 +5,16 @@
   @apply px-4 max-w-[1280px] m-auto my-8 space-y-2;
   & [data-card] {
     @apply flex flex-wrap gap-8;
-    @apply max-lg:flex-wrap;
   }
   & figure {
-    @apply w-full relative aspect-[2/1] rounded-xl overflow-hidden;
-    @apply max-lg:w-full;
+    @apply w-full relative aspect-[1/1] rounded-xl overflow-hidden;
+    @apply md:max-w-[452px] md:max-h-[452px];
+    @apply lg:max-w-[480px] lg:max-h-[480px];
   }
 
   & [data-card-body] {
-    @apply space-y-4 w-full;
+    @apply space-y-4;
+    @apply flex-1;
   }
   & [data-card-top] {
     @apply flex justify-between items-center;
@@ -22,13 +23,13 @@
     @apply text-white text-2xl;
   }
   & [data-boxs] {
-    @apply max-sm:grid-cols-2;
-    @apply sm:grid-cols-3;
-    @apply md:grid-cols-4;
+    @apply md:grid-cols-2;
+    @apply grid-cols-2;
     @apply grid gap-4;
   }
   & [data-box] {
-    @apply p-2 text-center text-white text-xl border-solid border-[1px] rounded-md cursor-pointer;
+    @apply p-2 text-center text-white text-shadow-md border-solid border-[1px] rounded-md cursor-pointer;
+    @apply lg:text-xl;
     &[data-box-full] {
       @apply text-[gray] border-[gray] cursor-not-allowed;
     }

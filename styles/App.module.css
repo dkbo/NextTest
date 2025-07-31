@@ -2,16 +2,17 @@
 
 .movies {
   @apply grid gap-4 cursor-pointer max-w-[1280px] m-auto px-4;
-  @apply max-md:grid-cols-1;
-  @apply md:grid-cols-2 md:gap-8;
-  @apply xl:grid-cols-3;
+  @apply max-sm:grid-cols-2;
+  @apply sm:grid-cols-2 md:gap-8;
+  @apply md:grid-cols-3;
+  @apply lg:grid-cols-4;
 
   & > [data-movie] {
     @apply flex flex-col w-full gap-y-5;
   }
 
   & figure {
-    @apply w-full overflow-hidden rounded-lg relative aspect-[2/1];
+    @apply w-full overflow-hidden rounded-lg relative aspect-[1/1];
   }
 
   & figure img {
