@@ -33,7 +33,7 @@ export default function VirtualMovieOrderTable(props: MovieProps) {
   }
 
   return (
-    <div ref={tableRef} className="h-[calc(100vh-61px)] overflow-auto border rounded-md">
+    <div ref={tableRef} className="h-[calc(100vh-60px)] overflow-auto border rounded-md">
       {/* Header */}
       <div className="grid grid-cols-[2fr_2fr_1fr_2fr_auto] font-semibold bg-gray-100 py-4 px-4 sticky top-0 z-10 border-b text-sm">
         <div>電影名稱</div>

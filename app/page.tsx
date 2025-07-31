@@ -8,7 +8,7 @@ export default async function Page() {
   console.log('首頁')
 
   return (
-    <div className="bg-blue-950 py-8 min-h-[calc(100vh-61px)]">
+    <div className="bg-blue-950 py-8 min-h-[calc(100vh-60px)]">
       {/* <div className="bg-center"></div> */}
       {/* <div className="m-5 text-center text-white text-2xl">電影列表</div> */}
       <Movies movieList={movieList} />

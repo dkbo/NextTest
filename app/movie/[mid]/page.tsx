@@ -8,7 +8,6 @@ interface Params {
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {
-  console.log('時刻表', await params)
   const { mid } = await params
   const query = {
     number_of_guests: 1,
@@ -22,7 +21,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   if (!movieTimeList) return notFound()
 
   return (
-    <div className="bg-blue-950 min-h-[calc(100vh-61px)]">
+    <div className="bg-blue-950 min-h-[calc(100vh-60px)]">
       <Movie movieTimeList={movieTimeList} movieList={movieList} />
     </div>
   )
