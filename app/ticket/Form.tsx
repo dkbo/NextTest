@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
 import { useTickerStore } from '@/stores/useTicket'
 import { useMoviesStore } from '@/stores/useMovies'
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect } from 'react'
 
 // 定義組件 props 型別
 interface MoviesProps {
@@ -24,18 +24,11 @@ export default function Form({ movieList, searchParams }: MoviesProps) {
 
   const { postTicket, alreadyed } = useTickerStore()
   const [params, setParams] = useState({
-    movie_id: +(searchParams.movie_id ?? ''),
+    movie_name: decodeURIComponent(searchParams.movie_name ?? ''),
     reservation_time: decodeURIComponent(searchParams.reservation_time ?? ''),
     number_of_guests: +(searchParams.number_of_guests ?? 1),
   })
-  const data = useMemo(
-    () => movieList.find((data) => +data.id === params.movie_id),
-    [movieList, params.movie_id]
-  )
-  //   setParams((prev) => ({
-  //   ...prev,
-  //   name: 'Interstellar',
-  // }))
+
   const onSubmit = () => {
     postTicket(params)
   }
@@ -57,7 +50,7 @@ export default function Form({ movieList, searchParams }: MoviesProps) {
         <Card className="w-md max-w-md backdrop-blur-md bg-white/60 shadow-2xl border border-white/30 rounded-3xl p-4">
           <CardHeader>
             <CardTitle className="text-3xl text-center font-bold text-gray-800">
-              {data?.name}
+              {params?.movie_name}
             </CardTitle>
           </CardHeader>
           <CardContent>

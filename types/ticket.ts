@@ -19,6 +19,6 @@ export interface TicketResType {
 
 export interface PostTicketData extends RequestData {
   number_of_guests: number
-  movie_id: number
+  movie_name: string
   reservation_time: string
 }

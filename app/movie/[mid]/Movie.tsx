@@ -54,7 +54,7 @@ export default function Movie(props: MovieProps) {
 
   const goToTicketing = (time: string) => {
     const query = {
-      movie_id: data?.id,
+      movie_name: data?.name,
       reservation_time: time,
       number_of_guests: 1,
     }
