@@ -4,6 +4,7 @@ import { useEffect, useRef, useMemo } from 'react'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { useTickerStore } from '@/stores/useTicket'
 import { TicketType } from '@/types/ticket'
+import { format } from 'date-fns'
 
 type MovieProps = {
   movieReservations: TicketType[]
@@ -56,7 +57,7 @@ export default function VirtualMovieOrderTable(props: MovieProps) {
               <div>{order.movie.name}</div>
               <div>{order.reservation_time}</div>
               <div>{order.number_of_guests}</div>
-              <div>{new Date(order.created_at).toLocaleString()}</div>
+              <div>{format(order.created_at, 'yyyy-MM-dd hh:mm:ss')}</div>
               <div>
                 <button
                   onClick={() => cancelReservation(order.id)}

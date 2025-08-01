@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import ToasterClient from '@/components/ToasterClient'
+import CopilotDrawer from '@/components/CopilotDrawer'
 import Menu from '@/components/Menu'
 import '@/styles/globals.css'
 const geistSans = Geist({
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Menu />
         {children}
         <ToasterClient />
+        <CopilotDrawer />
       </body>
     </html>
   )
